@@ -11,18 +11,13 @@ const createForm = (parentElement) => {
       },
       render: () => {
         parentElement.innerHTML =
-          data
-            .map((name, index) => {
-              const inputId = `input-${index}`;
-              return `<div>${name}\n<input id="${inputId}" type="text" /></div>`;
-            })
-            .join('') + "<button type='button' id='submit'>Submit</button>";
-  
+          data.map((name, index) => {
+            const inputId = `input-${index}`;
+            return `<div>${name}\n<input id="${inputId}" type="text" /></div>`;}).join('') + "<button type='button' id='submit'>Submit</button>";
         document.querySelector('#submit').onclick = () => {
           const result = data.map((name, index) => {
             const inputId = `input-${index}`;
             const inputElement = document.querySelector('#' + inputId);
-  
             if (inputElement) {
               return inputElement.value;
             } else {
@@ -30,9 +25,7 @@ const createForm = (parentElement) => {
               return null;
             }
           });
-  
           console.log('Form data:', result);
-  
           if (callback) {
             callback(result);
           }
