@@ -10,8 +10,7 @@ const createForm = (parentElement) => {
         callback = callbackInput;
       },
       render: () => {
-        parentElement.innerHTML =
-          data.map((name, index) => {
+        parentElement.innerHTML = data.map((name, index) => {
             const inputId = `input-${index}`;
             return `<div>${name}\n<input id="${inputId}" type="text" /></div>`;}).join('') + "<button type='button' id='submit'>Submit</button>";
         document.querySelector('#submit').onclick = () => {
