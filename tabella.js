@@ -9,7 +9,7 @@ const createTable = (parentElement) => {
         data.push(row);
       },
       render: () => {
-        let htmlTable = '<table border="1">';
+        let htmlTable = '<table>';
         htmlTable += data
           .map(
             (row) =>
