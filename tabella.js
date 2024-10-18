@@ -1,3 +1,5 @@
+const  giorno= date.now();
+
 const createTable = (parentElement) => {
     let data = [];
   
@@ -23,5 +25,5 @@ const createTable = (parentElement) => {
   };
   
   const table2 = createTable(document.querySelector('#table2'));
-  table2.build([['Data', 'Singola', 'Doppia', 'Suite'], ['Data', '10', '5', '3']]);
+  table2.build([['Data', 'Singola', 'Doppia', 'Suite'], [giorno, '10', '5', '3']]);
   table2.render();
