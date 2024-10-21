@@ -1,6 +1,6 @@
-let myObject;
 const myToken = "6cc74d30-eb47-4cb2-8949-fa751e101038"; // token ottenuto via mail 
 const myKey = "Chiara"; // chiave dell'oggetto
+const myObject = list;
 
 function set () {
     fetch("https://ws.cipiaceinfo.it/cache/set", {
@@ -11,7 +11,7 @@ function set () {
         },
         body: JSON.stringify({
         key: myKey,
-        value: jsonObject
+        value: myObject
         })
     })
     .then(r => r.json())
