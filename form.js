@@ -27,7 +27,7 @@ const createForm = (parentElement) => {
             const inputId = `input-${index}`;
             return `<div>${name}\n<input id="${inputId}" type="text" /></div>`;
           })
-          .join('') + "<button type='button' id='submit'>Submit</button>";
+          .join('') + "<button type='button' id='submit' class='btn btn-primary ms-2'>Submit</button>";
 
       document.querySelector('#submit').onclick = () => {
         const result = data.map((name, index) => {
