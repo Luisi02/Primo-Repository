@@ -1,9 +1,7 @@
 const conf = {
   "singola": 10,
   "doppia": 5,
-  "suite": 3,
-  "tripla": 1,
-  "Quadrupla": 15
+  "suite": 3
 };
 
 const createForm = (parentElement) => {
