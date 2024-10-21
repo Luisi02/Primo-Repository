@@ -28,7 +28,6 @@ const createTable = (parentElement) => {
       },
     };
   };
-  
   const table2 = createTable(document.querySelector('#table2'));
   table2.build();
   
