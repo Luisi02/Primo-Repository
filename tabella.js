@@ -5,6 +5,21 @@ const createTable = (parentElement) => {
       addRow: (row) => {
         data.push(row);
       },
+      updateRow: (newRow) => {
+        // Trovare la riga con la stessa "Data"
+        let found = false;
+        for (let i = 0; i < data.length; i++) {
+          if (data[i][0] === newRow[0]) {
+            // Aggiorna solo i valori delle colonne, lascia i nomi intatti
+            for (let j = 1; j < data[i].length; j++) {
+              data[i][j] = newRow[j]; // Sostituisci il valore mantenendo il nome
+            }
+            found = true;
+            break;
+          }
+        }
+        return found;
+      },
       build: () =>{
         let chiavi = ["Data"];
         let valori = ["Data"];
