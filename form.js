@@ -53,7 +53,12 @@ const createForm = (parentElement) => {
 const form = createForm(document.querySelector('#app'));
 
 form.onsubmit((result) => {
-  table2.addRow(result);
+  // Prova ad aggiornare la riga esistente
+  const updated = table2.updateRow(result);
+  if (!updated) {
+    // Se non è stata trovata nessuna riga con la stessa "Data", aggiungi una nuova riga
+    table2.addRow(result);
+  }
   table2.render();
 });
 
