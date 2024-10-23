@@ -1,3 +1,17 @@
+const giorno= new Date();
+
+function addDays(date, days) {
+  let result = new Date(date);
+  result.setDate(result.getDate() + days);
+  return result;
+}
+function formatDate(date) {
+  let day = String(date.getDate()).padStart(2, '0');
+  let month = String(date.getMonth() + 1).padStart(2, '0'); // Mesi indicizzati da 0
+  let year = date.getFullYear();
+  return ${day}/${month}/${year};
+}
+
 const createTable = (parentElement) => {
     let data = [];
   
