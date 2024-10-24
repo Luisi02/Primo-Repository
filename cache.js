@@ -1,6 +1,6 @@
 const myToken = "6cc74d30-eb47-4cb2-8949-fa751e101038"; // token ottenuto via mail 
 const myKey = "Chiara"; // chiave dell'oggetto
-const myObject = list;
+const myObject = lista_tabella;
 
 function set () {
     fetch("https://ws.cipiaceinfo.it/cache/set", {
@@ -35,4 +35,9 @@ function get () {
         myObject = JSON.parse(r.result); // r.result conterrà l'oggetto richiesto
         })
     })
+    if (myObject===undefined){
+        return []
+    }else{
+    return myObject
+    }
 }
